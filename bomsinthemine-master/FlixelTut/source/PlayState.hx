@@ -29,6 +29,7 @@ class PlayState extends FlxState
 	public var playerClass:Float = 0;
 	public var _grpStones:FlxTypedGroup<Rock>;
 	private var _grpGold:FlxTypedGroup<Gold>;
+	public var _grpGems:FlxTypedGroup<Gem>;
 	public var _gridSize:Int = 16;
 	public var _grid:Array<Array<Bool>>;
 	
@@ -47,8 +48,10 @@ class PlayState extends FlxState
 		add(_mGround);
 		_grpStones = new FlxTypedGroup<Rock>();
 		_grpGold = new FlxTypedGroup<Gold>();
+		_grpGems = new FlxTypedGroup<Gem>();
 		add(_grpStones);
 		add(_grpGold);
+		add(_grpGems);
 		switch(playerClass){
 			case 0:
 				_player = new Jim(0, 0, this, 0);
@@ -163,6 +166,7 @@ class PlayState extends FlxState
 			}
 		}
 		FlxG.overlap(_player, _grpGold, pickGold);
+		FlxG.overlap(_player, _grpGems, pickGem);
 		
 		_hud.updateHUD(_health, _money, _weapons, _ready);
 	}
@@ -189,6 +193,12 @@ class PlayState extends FlxState
 		return Math.sqrt(a * a + b * b);
 	}
 	/**----- Nice and Shiny -----*/
+	
+		public function pickGem(O:Player, C:Gem)
+	{
+		C.kill();
+	}
+	
 	public function pickGold(O:Player, G:Gold)
 	{
 		_money++;
@@ -237,7 +247,8 @@ class PlayState extends FlxState
 	public function addGem(C:Gem) {
 		if (!checkGrid(C.x, C.y)) {
 		setGrid(C.x, C.y, true);
-		add(C);
+		_grpGems.add(C);
+		
 		}
 	}
 	
