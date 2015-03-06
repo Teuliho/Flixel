@@ -23,6 +23,6 @@
 -swf-lib C:\Users\Domi\Documents\GitHub\Flixel\bomsinthemine-master\FlixelTut\export/flash/obj/assets.swf
 -swf-version 11.8
 -swf export/flash/bin/FlixelTut.swf
--swf-header 640:480:60:000000
+-swf-header 1280:960:60:000000
 -cp export/flash/haxe
 -debug

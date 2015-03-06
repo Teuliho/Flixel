@@ -183,19 +183,19 @@ class ApplicationMain {
 			depthBuffer: false,
 			fps: Std.int (60),
 			fullscreen: false,
-			height: Std.int (480),
+			height: Std.int (960),
 			orientation: "portrait",
 			resizable: true,
 			stencilBuffer: false,
 			title: "FlixelTut",
 			vsync: true,
-			width: Std.int (640),
+			width: Std.int (1280),
 			
 		}
 		
 		#if js
 		#if (munit || utest)
-		flash.Lib.embed (null, 640, 480, "000000");
+		flash.Lib.embed (null, 1280, 960, "000000");
 		#end
 		#else
 		create ();

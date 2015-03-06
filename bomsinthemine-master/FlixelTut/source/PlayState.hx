@@ -211,7 +211,8 @@ class PlayState extends FlxState
 		S.damage(_player.damage);
 	}
 	
-		public function checkGrid(i:Float = 0, j:Float = 0):Bool {
+	public function checkGrid(i:Float = 0, j:Float = 0):Bool 
+	{
 		return _grid[Math.floor(i / 16)][Math.floor(j / 16)];
 	}
 	
