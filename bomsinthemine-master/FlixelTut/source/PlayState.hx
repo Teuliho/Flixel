@@ -30,6 +30,7 @@ class PlayState extends FlxState
 	public var _grpStones:FlxTypedGroup<Rock>;
 	private var _grpGold:FlxTypedGroup<Gold>;
 	public var _grpGems:FlxTypedGroup<Gem>;
+	
 	public var _gridSize:Int = 16;
 	public var _grid:Array<Array<Bool>>;
 	
@@ -49,6 +50,8 @@ class PlayState extends FlxState
 		_grpStones = new FlxTypedGroup<Rock>();
 		_grpGold = new FlxTypedGroup<Gold>();
 		_grpGems = new FlxTypedGroup<Gem>();
+	
+	
 		add(_grpStones);
 		add(_grpGold);
 		add(_grpGems);
@@ -89,6 +92,7 @@ class PlayState extends FlxState
 			{
 			addGold(new Gold(x, y));
 			}
+		
 	}
 	
 	/**---------------- Reality and all its things ----------------*/
@@ -252,6 +256,8 @@ class PlayState extends FlxState
 		
 		}
 	}
+
+	
 	
 	
 	/**----------------------------- Armageddon -----------------------------*/

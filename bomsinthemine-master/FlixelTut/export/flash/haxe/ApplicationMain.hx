@@ -37,6 +37,10 @@ class ApplicationMain {
 		types.push (AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/minelvl003.oel");
+		types.push (AssetType.TEXT);
+		
+		
 		urls.push ("assets/data/room-001.oel");
 		types.push (AssetType.TEXT);
 		

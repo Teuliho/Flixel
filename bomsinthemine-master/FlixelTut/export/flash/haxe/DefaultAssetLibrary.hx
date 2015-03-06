@@ -50,6 +50,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/Game.oep", AssetType.TEXT);
 		className.set ("assets/data/minelvl002.oel", __ASSET__assets_data_minelvl002_oel);
 		type.set ("assets/data/minelvl002.oel", AssetType.TEXT);
+		className.set ("assets/data/minelvl003.oel", __ASSET__assets_data_minelvl003_oel);
+		type.set ("assets/data/minelvl003.oel", AssetType.TEXT);
 		className.set ("assets/data/room-001.oel", __ASSET__assets_data_room_001_oel);
 		type.set ("assets/data/room-001.oel", AssetType.TEXT);
 		className.set ("assets/images/BigBomb.png", __ASSET__assets_images_bigbomb_png);
@@ -104,6 +106,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.TEXT);
 		id = "assets/data/minelvl002.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/minelvl003.oel";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -224,6 +230,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		#end
 		
 		#if (windows || mac || linux)
@@ -238,6 +245,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/minelvl002.oel", __ASSET__assets_data_minelvl002_oel);
 		type.set ("assets/data/minelvl002.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/minelvl003.oel", __ASSET__assets_data_minelvl003_oel);
+		type.set ("assets/data/minelvl003.oel", AssetType.TEXT);
 		
 		className.set ("assets/data/room-001.oel", __ASSET__assets_data_room_001_oel);
 		type.set ("assets/data/room-001.oel", AssetType.TEXT);
@@ -872,6 +882,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_game_oep extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_minelvl002_oel extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_minelvl003_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_room_001_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_bigbomb_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_bomb_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -921,6 +932,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
 #end
 
 #else
@@ -935,6 +947,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/data-goes-here.txt") class __ASSET__assets_data_data_goes_here_txt extends lime.utils.ByteArray {}
 @:file("assets/data/Game.oep") class __ASSET__assets_data_game_oep extends lime.utils.ByteArray {}
 @:file("assets/data/minelvl002.oel") class __ASSET__assets_data_minelvl002_oel extends lime.utils.ByteArray {}
+@:file("assets/data/minelvl003.oel") class __ASSET__assets_data_minelvl003_oel extends lime.utils.ByteArray {}
 @:file("assets/data/room-001.oel") class __ASSET__assets_data_room_001_oel extends lime.utils.ByteArray {}
 @:bitmap("assets/images/BigBomb.png") class __ASSET__assets_images_bigbomb_png extends lime.graphics.Image {}
 @:bitmap("assets/images/Bomb.png") class __ASSET__assets_images_bomb_png extends lime.graphics.Image {}
